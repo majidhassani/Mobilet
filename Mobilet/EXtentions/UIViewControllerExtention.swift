@@ -6,4 +6,16 @@
 //  Copyright © 2019 Majid Hassani. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIViewController{
+    
+    func showMessage(_ title:String,_ text:String){
+        let alert = UIAlertController(title: title, message: text, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+}
+

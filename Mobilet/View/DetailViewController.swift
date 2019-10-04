@@ -9,13 +9,22 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    
+    var viewModel:CollectionCellViewModel!
+    
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var text: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        self.text.text = self.viewModel.title
+        self.viewModel.setImage(imageView: self.image)
+    }
 
     /*
     // MARK: - Navigation

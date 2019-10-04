@@ -16,7 +16,9 @@ class SplashViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.performSegue(withIdentifier: Constants.GO_TO_MAIN_PAGE, sender: self)
+    }
     /*
     // MARK: - Navigation
 

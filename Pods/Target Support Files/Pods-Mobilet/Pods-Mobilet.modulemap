@@ -1,0 +1,6 @@
+framework module Pods_Mobilet {
+  umbrella header "Pods-Mobilet-umbrella.h"
+
+  export *
+  module * { export * }
+}
